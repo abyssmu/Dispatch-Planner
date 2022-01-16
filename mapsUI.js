@@ -12,11 +12,11 @@ function addMarker(loc)
 		scaledSize: new google.maps.Size(radius, radius)
 	}
 
-	if(loc.type == "hub")
+	if(loc['type'] == "hub")
 	{
 		const marker = new google.maps.Marker(
 			{
-				position: loc.coordinates,
+				position: [loc['lat'], loc['lng']],
 				map: map,
 				icon: hubIcon
 			}
@@ -25,11 +25,11 @@ function addMarker(loc)
 		addInfoWindow(marker, loc)
 	}
 	
-	if(loc.type == "station")
+	if(loc['type'] == "station")
 	{
 		const marker = new google.maps.Marker(
 			{
-				position: loc.coordinates,
+				position: [loc['lat'], loc['lng']],
 				map: map,
 				icon: stationIcon
 			}

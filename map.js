@@ -58,6 +58,7 @@ function initMap()
 
 	for(var i = 0; i < locations.length; ++i)
 	{
-		addMarker(locations[i])
+		console.log(locations['locations'][i])
+		addMarker(locations['locations'][i])
 	}
 }

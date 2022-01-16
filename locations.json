@@ -1,0 +1,247 @@
+[
+	{
+		"name": "HART",
+		"number": 61,
+		"lat": 41.7658,
+		"lng": -72.6734,
+		"type": "hub"
+	},
+	{
+		"name": "MIDD",
+		"number": 62,
+		"lat": 41.5623,
+		"lng": -72.6506,
+		"type": "hub"
+	},
+	{
+		"name": "METU",
+		"number": 72,
+		"lat": 40.5432,
+		"lng": -74.3632,
+		"type": "hub"
+	},
+	{
+		"name": "WOOD",
+		"number": 89,
+		"lat": 40.8457,
+		"lng": -74.0879,
+		"type": "hub"
+	},
+	{
+		"name": "SYRA",
+		"number": 132,
+		"lat": 43.0481,
+		"lng": -76.1474,
+		"type": "hub"
+	},
+	{
+		"name": "HRBG",
+		"number": 170,
+		"lat": 40.2732,
+		"lng": -76.8867,
+		"type": "hub"
+	},
+	{
+		"name": "LEHI",
+		"number": 182,
+		"lat": 40.652,
+		"lng": -75.5742,
+		"type": "hub"
+	},
+	{
+		"name": "HAGE",
+		"number": 219,
+		"lat": 39.6418,
+		"lng": -77.72,
+		"type": "hub"
+	},
+	{
+		"name": "GRNB",
+		"number": 274,
+		"lat": 36.0726,
+		"lng": -79.792,
+		"type": "hub"
+	},
+	{
+		"name": "CHAR",
+		"number": 282,
+		"lat": 35.2271,
+		"lng": -80.8431,
+		"type": "hub"
+	},
+	{
+		"name": "ATLA",
+		"number": 303,
+		"lat": 33.749,
+		"lng": -84.388,
+		"type": "hub"
+	},
+	{
+		"name": "MARI",
+		"number": 305,
+		"lat": 33.9526,
+		"lng": -84.5499,
+		"type": "hub"
+	},
+	{
+		"name": "OCAL",
+		"number": 344,
+		"lat": 29.1872,
+		"lng": -82.1401,
+		"type": "hub"
+	},
+	{
+		"name": "NASH",
+		"number": 371,
+		"lat": 36.1627,
+		"lng": -86.7816,
+		"type": "hub"
+	},
+	{
+		"name": "MEMP",
+		"number": 381,
+		"lat": 35.1495,
+		"lng": -90.049,
+		"type": "hub"
+	},
+	{
+		"name": "OLIV",
+		"number": 389,
+		"lat": 34.9618,
+		"lng": -89.8295,
+		"type": "hub"
+	},
+	{
+		"name": "NOKY",
+		"number": 406,
+		"lat": 39.1031,
+		"lng": -84.512,
+		"type": "hub"
+	},
+	{
+		"name": "COLO",
+		"number": 432,
+		"lat": 39.9612,
+		"lng": -82.998,
+		"type": "hub"
+	},
+	{
+		"name": "TOLE",
+		"number": 436,
+		"lat": 41.6528,
+		"lng": -83.5379,
+		"type": "hub"
+	},
+	{
+		"name": "GRWD",
+		"number": 474,
+		"lat": 39.6137,
+		"lng": -86.1067,
+		"type": "hub"
+	},
+	{
+		"name": "STPL",
+		"number": 552,
+		"lat": 44.9537,
+		"lng": -93.09,
+		"type": "hub"
+	},
+	{
+		"name": "BILL",
+		"number": 591,
+		"lat": 45.7833,
+		"lng": -108.5007,
+		"type": "hub"
+	},
+	{
+		"name": "CHIC",
+		"number": 604,
+		"lat": 41.8781,
+		"lng": -87.6298,
+		"type": "hub"
+	},
+	{
+		"name": "CHAM",
+		"number": 619,
+		"lat": 40.1164,
+		"lng": -88.2434,
+		"type": "hub"
+	},
+	{
+		"name": "LNXA",
+		"number": 641,
+		"lat": 38.9536,
+		"lng": -94.7336,
+		"type": "hub"
+	},
+	{
+		"name": "KCMO",
+		"number": 644,
+		"lat": 39.0997,
+		"lng": -94.5786,
+		"type": "hub"
+	},
+	{
+		"name": "DALL",
+		"number": 753,
+		"lat": 32.7767,
+		"lng": -96.797,
+		"type": "hub"
+	},
+	{
+		"name": "FTWO",
+		"number": 760,
+		"lat": 82.755,
+		"lng": -97.3308,
+		"type": "hub"
+	},
+	{
+		"name": "HOUS",
+		"number": 774,
+		"lat": 29.7604,
+		"lng": -95.3698,
+		"type": "hub"
+	},
+	{
+		"name": "DENV",
+		"number": 802,
+		"lat": 39.7392,
+		"lng": -104.9903,
+		"type": "hub"
+	},
+	{
+		"name": "SALT",
+		"number": 841,
+		"lat": 40.7608,
+		"lng": -111.891,
+		"type": "hub"
+	},
+	{
+		"name": "PHOE",
+		"number": 850,
+		"lat": 33.4484,
+		"lng": -112.074,
+		"type": "hub"
+	},
+	{
+		"name": "RLTO",
+		"number": 923,
+		"lat": 34.1064,
+		"lng": -117.3703,
+		"type": "hub"
+	},
+	{
+		"name": "SACR",
+		"number": 958,
+		"lat": 38.5816,
+		"lng": -121.4944,
+		"type": "hub"
+	},
+	{
+		"name": "PORT",
+		"number": 972,
+		"lat": 45.5152,
+		"lng": -122.6784,
+		"type": "hub"
+	}
+]

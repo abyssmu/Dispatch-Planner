@@ -54,7 +54,9 @@ function initMap()
 		  }, {}]
 	});
 
-	locations = getLocations()
+	locations = typeof(getLocations())
+
+	console.log(locations)
 
 	for(var i = 0; i < locations.length; ++i)
 	{

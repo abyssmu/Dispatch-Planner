@@ -12,11 +12,14 @@ function addMarker(loc)
 		scaledSize: new google.maps.Size(radius, radius)
 	}
 
+	lat = loc['lat']
+	lng = loc['lng']
+
 	if(loc['type'] == "hub")
 	{
 		const marker = new google.maps.Marker(
 			{
-				position: [loc['lat'], loc['lng']],
+				position: {lat, lng},
 				map: map,
 				icon: hubIcon
 			}
@@ -29,7 +32,7 @@ function addMarker(loc)
 	{
 		const marker = new google.maps.Marker(
 			{
-				position: [loc['lat'], loc['lng']],
+				position: {lat, lng},
 				map: map,
 				icon: stationIcon
 			}

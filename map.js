@@ -54,13 +54,5 @@ function initMap()
 		  }, {}]
 	});
 
-	locations = typeof(getLocations())
-
-	console.log(locations)
-
-	for(var i = 0; i < locations.length; ++i)
-	{
-		console.log(locations['locations'][i])
-		addMarker(locations['locations'][i])
-	}
+	getLocations()
 }

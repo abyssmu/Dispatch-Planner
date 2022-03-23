@@ -1,10 +1,12 @@
 function showRuns(name)
 {
+    name = name.toUpperCase()
+
     if(name == "CHAM")
     {
         clearLines()
 
-        CHAMruns()
+        CHAMruns(locations)
     }
 
     if(name == "LNXA")
@@ -13,45 +15,56 @@ function showRuns(name)
     }
 }
 
-function addCHAMruns(dest)
+function findLocation(locs, dest)
 {
-    addLine([CHAM(), dest])
+    result = ""
+    locs['locations'].forEach(entry => {        
+        if(dest === entry.name.toUpperCase())
+        {
+            result = entry
+        }
+    })
+
+    return result
 }
 
-function CHAMruns()
+function CHAMruns(locs)
 {
-    //East
-    addCHAMruns(HART())
-    addCHAMruns(METU())
-    addCHAMruns(WOOD())
-    addCHAMruns(SYRA())
-    addCHAMruns(HRBG())
-    addCHAMruns(LEHI())
-    addCHAMruns(HAGE())
-    addCHAMruns(GRNB())
-    addCHAMruns(CHAR())
-    addCHAMruns(ATLA())
-    addCHAMruns(MARI())
-    addCHAMruns(OCAL())
-    addCHAMruns(NASH())
-    addCHAMruns(NOKY())
-    addCHAMruns(COLO())
-    addCHAMruns(TOLE())
-    addCHAMruns(CHIC())
-    
-    //West
-    addCHAMruns(MEMP())
-    addCHAMruns(OLIV())
-    addCHAMruns(STPL())
-    addCHAMruns(LNXA())
-    addCHAMruns(KCMO())
-    addCHAMruns(DALL())
-    addCHAMruns(FTWO())
-    addCHAMruns(HOUS())
-    addCHAMruns(DENV())
-    addCHAMruns(SALT())
-    addCHAMruns(PHOE())
-    addCHAMruns(RLTO())
-    addCHAMruns(SACR())
-    addCHAMruns(PORT())
+    destinations = [
+        "HART",
+        "METU",
+        "WOOD",
+        "SYRA",
+        "HRBG",
+        "LEHI",
+        "HAGE",
+        "GRNB",
+        "CHAR",
+        "ATLA",
+        "MARI",
+        "OCAL",
+        "NASH",
+        "NOKY",
+        "COLO",
+        "TOLE",
+        "CHIC",
+        "MEMP",
+        "OLIV",
+        "STPL",
+        "LNXA",
+        "KCMO",
+        "DALL",
+        "FTWO",
+        "HOUS",
+        "DENV",
+        "SALT",
+        "PHOE",
+        "RLTO",
+        "SACR",
+        "PORT"
+    ]
+
+    destinations.forEach(entry => {
+        addLine([findLocation(locations, "CHAM"), findLocation(locations, entry)])
+    })
 }

@@ -1,12 +1,12 @@
 function addMarker(loc)
-{
+{	
 	hubRad = 15
 	hubIcon = {
 		url: "./icons/hubIcon.png",
 		scaledSize: new google.maps.Size(hubRad, hubRad)
 	}
 
-	notHubRad = 10
+	notHubRad = 8
 	stationIcon = {
 		url: "./icons/stationIcon.png",
 		scaledSize: new google.maps.Size(notHubRad, notHubRad)
@@ -136,7 +136,7 @@ function addLine(route)
 {
 	polyline = new google.maps.Polyline(
 		{
-			path: [route[0].coordinates, route[1].coordinates],
+			path: [{lat: route[0].lat, lng: route[0].lng}, {lat: route[1].lat, lng: route[1].lng}],
 			geodesic: false,
 			strokeColor: "black",
 			strokeOpacity: 1.0,
@@ -152,7 +152,7 @@ function addInfoWindow(marker, loc)
 {
 	var infoWindow = new google.maps.InfoWindow(
 		{
-			content: "<h3>" + loc.number + "/" + loc.name + "</h3>"
+			content: "<h3>" + loc.number + "/" + loc.name.toUpperCase() + "</h3>"
 		}
 	);
 

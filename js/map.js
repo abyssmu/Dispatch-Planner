@@ -16,40 +16,33 @@ function initMap()
 		zoom: 5,
 		disableDefaultUI: true,
 		styles: [{
-			"featureType": "administrative.country",
 			"elementType": "labels",
 			"stylers": [{
 			  "visibility": "off"
+			}]
+		  }, {
+			"featureType": "administrative",
+			"elementType": "labels",
+			"stylers": [{
+			  "visibility": "off"
+			}]
+		  }, {
+			"featureType": "administrative",
+			"elementType": "all",
+			"stylers": [{
+			  "color": "#f2f2f2"
 			}]
 		  }, {
 			"featureType": "administrative.province",
-			"elementType": "labels",
+			"elementType": "all",
 			"stylers": [{
-			  "visibility": "off"
+			  "color": "#404040"
 			}]
 		  }, {
-			"featureType": "administrative.neighborhood",
-			"elementType": "labels",
+			"featureType": "administrative.country",
+			"elementType": "all",
 			"stylers": [{
-			  "visibility": "off"
-			}]
-		  }, {
-			"featureType": "administrative.land_parcel",
-			"elementType": "labels",
-			"stylers": [{
-			  "visibility": "off"
-			}]
-		  }, {
-			"featureType": "administrative.locality",
-			"elementType": "labels",
-			"stylers": [{
-			  "visibility": "off"
-			}]
-		  }, {
-			"featureType": "poi",
-			"elementType": "labels",
-			"stylers": [{
-			  "visibility": "off"
+			  "color": "#404040"
 			}]
 		  }, {}]
 	});

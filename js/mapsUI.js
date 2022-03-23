@@ -65,6 +65,71 @@ function addMarker(loc)
 
 		addInfoWindow(marker, loc)
 	}
+
+	if(loc['type'] == "annex")
+	{
+		const marker = new google.maps.Marker(
+			{
+				position: {lat, lng},
+				map: map,
+				icon: annexIcon
+			}
+		);
+
+		addInfoWindow(marker, loc)
+	}
+
+	if(loc['type'] == "hub local")
+	{
+		const marker = new google.maps.Marker(
+			{
+				position: {lat, lng},
+				map: map,
+				icon: hubLocIcon
+			}
+		);
+
+		addInfoWindow(marker, loc)
+	}
+
+	if(loc['type'] == "nfs")
+	{
+		const marker = new google.maps.Marker(
+			{
+				position: {lat, lng},
+				map: map,
+				icon: nfsIcon
+			}
+		);
+
+		addInfoWindow(marker, loc)
+	}
+
+	if(loc['type'] == "smartpost hub")
+	{
+		const marker = new google.maps.Marker(
+			{
+				position: {lat, lng},
+				map: map,
+				icon: smartIcon
+			}
+		);
+
+		addInfoWindow(marker, loc)
+	}
+
+	if(loc['type'] == "substation")
+	{
+		const marker = new google.maps.Marker(
+			{
+				position: {lat, lng},
+				map: map,
+				icon: subStatIcon
+			}
+		);
+
+		addInfoWindow(marker, loc)
+	}
 }
 
 function addLine(route)

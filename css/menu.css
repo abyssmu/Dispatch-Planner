@@ -38,8 +38,18 @@ li.dropdown
     position: absolute;
     background-color: #f9f9f9;
     min-width: 5%;
+    max-height: 50%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    overflow: auto;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.dropContent::-webkit-scrollbar
+{
+    display: none;
 }
 
 .dropContent a
@@ -61,14 +71,20 @@ li.dropdown
     display:block;
 }
 
+.dropContent
+{
+    overflow: auto;
+}
+
 .searchBar
 {
-    box-sizing: border-box;
     background-image: url('/images/searchicon.png');
-    background-position: 14px 12px;
+    background-position: 8px 8px;
     background-repeat: no-repeat;
     font-size: 16px;
     padding: 14px 20px 12px 45px;
     border: none;
     border-bottom: 1px solid #ddd;
+    position:sticky;
+    top: 0;
 }

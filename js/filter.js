@@ -1,7 +1,7 @@
-function filterList()
+function filterList(inputID)
 {
     var input, filter, ul, li, a, i
-    input = document.getElementById("searchBar")
+    input = document.getElementById(inputID)
     filter = input.value.toUpperCase()
     
     div = document.getElementById("hubs")
@@ -13,11 +13,11 @@ function filterList()
 
         if(txtValue.toUpperCase().indexOf(filter) > -1)
         {
-            a[i].style.display = "";
+            a[i].style.display = ""
         }
         else
         {
-            a[i].style.display = "none";
+            a[i].style.display = "none"
         }
     }
 }

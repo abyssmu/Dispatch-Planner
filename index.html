@@ -4,16 +4,41 @@
 		<meta charset="UTF-8">
 		<title>Main</title>
 		<link rel="stylesheet" href="./css/main.css">
+		<link rel="stylesheet" href="./css/menu.css">
 
+		<script src="./js/filter.js"></script>
 		<script src="./js/locations.js"></script>
 		<script src="./js/map.js"></script>
 		<script src="./js/mapsUI.js"></script>
 		<script src="./js/runs.js"></script>
 	</head>
 	<body>
-		<div id = "map">
-
-		</div>
+		<div id="mainBody">
+			<ul class="menu">
+				<li class="dropdown">
+					<!-- <button onclick="" -->
+					<a href="javascript:void(0)" class="dropBtn">File</a>
+					<div class="dropContent">
+						<a href="#">Import</a>
+						<a href="#">Export</a>
+					</div>
+				</li>
+				<li class="dropdown">
+					<a href="javascript:void(0)" class="dropBtn">Hub</a>
+					<div id="hubs" class="dropContent">
+						<input type="text" placeholder="Search..." class="searchBar" onkeyup="filterList()">
+						<a href="#">61/HART</a>
+						<a href="#">619/CHAM</a>
+						<a href="#">641/LNXA</a>
+						<a href="#">923/RLTO</a>
+					</div>
+				</li>
+			</ul>
+			
+			<div id="map">
+	
+			</div>
+		</div>>
 
 		<script
 			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEeVioy07Xs3ryj4tOvsY3crMJpOA0WdM&callback=initMap"

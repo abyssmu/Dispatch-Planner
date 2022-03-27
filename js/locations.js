@@ -7,8 +7,6 @@ async function getLocations()
     {
         loc = locations['locations'][i]
 
-        addMarker(loc)
-
         if(loc.type == "hub")
         {
             menu = document.getElementById("hubs")
@@ -41,6 +39,8 @@ async function getLocations()
         element = document.createElement("a")
 
         element.setAttribute("href", "#")
+        element.setAttribute("onmouseover", "addMarker(\"" + loc.name.toUpperCase() + "\")")
+        element.setAttribute("onmouseout", "removeMarker()")
         element.appendChild(document.createTextNode(loc.number + "/" + loc.name.toUpperCase()))
 
         menu.appendChild(element)

@@ -1,10 +1,10 @@
-function filterList(inputID)
+function filterList(inputID, searchID)
 {
     var input, filter, ul, li, a, i
-    input = document.getElementById(inputID)
+    input = document.getElementById(searchID)
     filter = input.value.toUpperCase()
     
-    div = document.getElementById("hubs")
+    div = document.getElementById(inputID)
     a = div.getElementsByTagName("a")
 
     for(i = 0; i < a.length; ++i)

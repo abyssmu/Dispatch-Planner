@@ -18,33 +18,33 @@ function initMap()
 		styles: [{
 			"elementType": "labels",
 			"stylers": [{
-			  "visibility": "off"
+				"visibility": "off"
 			}]
-		  }, {
+		}, {
 			"featureType": "administrative",
 			"elementType": "labels",
 			"stylers": [{
-			  "visibility": "off"
+				"visibility": "off"
 			}]
-		  }, {
+		}, {
 			"featureType": "administrative",
 			"elementType": "all",
 			"stylers": [{
-			  "color": "#f2f2f2"
+				"color": "#f2f2f2"
 			}]
-		  }, {
+		}, {
 			"featureType": "administrative.province",
 			"elementType": "all",
 			"stylers": [{
-			  "color": "#404040"
+				"color": "#404040"
 			}]
-		  }, {
+		}, {
 			"featureType": "administrative.country",
 			"elementType": "all",
 			"stylers": [{
-			  "color": "#404040"
+				"color": "#404040"
 			}]
-		  }, {}]
+		}, {}]
 	});
 
 	getLocations()

@@ -1,5 +1,9 @@
-function addMarker(loc)
-{	
+var markerList = []
+
+function addMarker(name)
+{
+	console.log(name)
+	loc = findLocation(locations, name)
 	hubRad = 15
 	hubIcon = {
 		url: "./icons/hubIcon.png",
@@ -37,99 +41,60 @@ function addMarker(loc)
 		scaledSize: new google.maps.Size(notHubRad, notHubRad)
 	}
 
+	if(loc['type'] == "hub")
+	{
+		createMarker(loc, hubIcon)
+	}
+	else if(loc['type'] == "station")
+	{
+		createMarker(loc, stationIcon)
+	}
+	else if(loc['type'] == "annex")
+	{
+		createMarker(loc, annexIcon)
+	}
+	else if(loc['type'] == "hub local")
+	{
+		createMarker(loc, hubLocIcon)
+	}
+	else if(loc['type'] == "nfs")
+	{
+		createMarker(loc, nfsIcon)
+	}
+	else if(loc['type'] == "smartpost hub")
+	{
+		createMarker(loc, smartIcon)
+	}
+	else if(loc['type'] == "substation")
+	{
+		createMarker(loc, subStatIcon)
+	}
+}
+
+function createMarker(loc, iconType)
+{
 	lat = loc['lat']
 	lng = loc['lng']
 
-	if(loc['type'] == "hub")
-	{
-		const marker = new google.maps.Marker(
-			{
-				position: {lat, lng},
-				map: map,
-				icon: hubIcon
-			}
-		);
+	var marker = new google.maps.Marker(
+		{
+			position: {lat, lng},
+			map: map,
+			icon: iconType
+		}
+	)
+	markerList.push(marker)
 
-		addInfoWindow(marker, loc)
-	}
-	
-	if(loc['type'] == "station")
-	{
-		const marker = new google.maps.Marker(
-			{
-				position: {lat, lng},
-				map: map,
-				icon: stationIcon
-			}
-		);
+	addInfoWindow(marker, loc)
+}
 
-		addInfoWindow(marker, loc)
-	}
+function removeMarker()
+{
+	markerList.forEach(entry => {
+		entry.setMap(null)
+	})
 
-	if(loc['type'] == "annex")
-	{
-		const marker = new google.maps.Marker(
-			{
-				position: {lat, lng},
-				map: map,
-				icon: annexIcon
-			}
-		);
-
-		addInfoWindow(marker, loc)
-	}
-
-	if(loc['type'] == "hub local")
-	{
-		const marker = new google.maps.Marker(
-			{
-				position: {lat, lng},
-				map: map,
-				icon: hubLocIcon
-			}
-		);
-
-		addInfoWindow(marker, loc)
-	}
-
-	if(loc['type'] == "nfs")
-	{
-		const marker = new google.maps.Marker(
-			{
-				position: {lat, lng},
-				map: map,
-				icon: nfsIcon
-			}
-		);
-
-		addInfoWindow(marker, loc)
-	}
-
-	if(loc['type'] == "smartpost hub")
-	{
-		const marker = new google.maps.Marker(
-			{
-				position: {lat, lng},
-				map: map,
-				icon: smartIcon
-			}
-		);
-
-		addInfoWindow(marker, loc)
-	}
-
-	if(loc['type'] == "substation")
-	{
-		const marker = new google.maps.Marker(
-			{
-				position: {lat, lng},
-				map: map,
-				icon: subStatIcon
-			}
-		);
-
-		addInfoWindow(marker, loc)
-	}
+	makerList = []
 }
 
 function addLine(route)

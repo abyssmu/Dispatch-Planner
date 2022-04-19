@@ -1,3 +1,8 @@
+:root
+{
+    --resizerSize: 8px;
+}
+
 html, body
 {
     height: 100%;
@@ -9,10 +14,67 @@ html, body
 
 #mainBody
 {
+    display: flex;
     height: 100%;
+    width: 100%;
 }
 
 #map
 {
-    height: 95%;
+    flex: 1;
+    height: 100%;
+}
+
+.resizer[data-direction='horizontal'], .resizer[data-direction='vertical']
+{
+    background-color: #cbd5e0;
+}
+
+.resizer[data-direction='horizontal']
+{
+    cursor: ew-resize;
+    height: 100%;
+    width: var(--resizerSize);
+}
+
+.resizer[data-direction='vertical']
+{
+    cursor: ns-resize;
+    height: var(--resizerSize);
+    width: 100%;
+}
+
+.container-left
+{
+    height: 100%;
+    width: 50%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.container-right
+{
+    flex: 1;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-top
+{
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.container-bottom
+{
+    flex: 1;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }

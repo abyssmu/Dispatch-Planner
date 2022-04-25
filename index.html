@@ -10,12 +10,12 @@
 		<script src="./js/locations.js"></script>
 		<script src="./js/map.js"></script>
 		<script src="./js/mapsUI.js"></script>
-		<script src="./js/runs.js"></script>
 		<script src="./js/resizeDiv.js"></script>
+		<script src="./js/tabs.js"></script>
 	</head>
-	<body>
+	<body onload="hideTabs()">
 		<div id="mainBody">
-			<div class="container-left">
+			<!-- <div class="container-left">
 				<div class="container-top", style="height: 75%;">
 					<ul class="menu">
 						<li class="dropdown" id="hubsMenu">
@@ -78,6 +78,25 @@
 				<div class="container-bottom">
 					<div id="trailers"></div>
 				</div>
+			</div> -->
+		
+			<div id="tabs">
+				<button class="tabLink", onclick="openTab('home', this)", style="background-color: green;">Home</button>
+				<button class="tabLink", onclick="openTab('mapContainer', this)">Map</button>
+				<button class="tabLink", onclick="openTab('planner', this)">Planner</button>
+				<button class="tabLink", onclick="openTab('trailers', this)">Trailers</button>
+				<button class="tabLink", onclick="openTab('graph', this)">Graph</button>
+			</div>
+
+			<div id="content">
+				<div id="home" class="tabContent", style="display: block">Home</div>
+				<div id="mapContainer" class="tabContent">
+					<div id="map"></div>
+					<div id="visibility">Visifdsafsbility</div>
+				</div>
+				<div id="planner" class="tabContent">Planner</div>
+				<div id="trailers" class="tabContent">Trailers</div>
+				<div id="graph" class="tabContent">Graph</div>
 			</div>
 		</div>
 

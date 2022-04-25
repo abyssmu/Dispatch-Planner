@@ -123,7 +123,6 @@ function addInfoWindow(marker, loc)
 
 	marker.addListener('mouseover', () => infoWindow.open(map, marker))
 	marker.addListener('mouseout', () => infoWindow.close())
-	marker.addListener('click', () => showRuns(loc.name))
 }
 
 function clearLines()

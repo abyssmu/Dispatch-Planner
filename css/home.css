@@ -1,0 +1,80 @@
+#home
+{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#home #top
+{
+    flex: 1;
+    width: 100%;
+    display: flex;
+}
+
+#home #top #facility, #dispatch, #import
+{
+    flex: 1;
+    border: solid rgb(255, 0, 43);
+}
+
+#home #top #import
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#import #selectcsvcontainer,
+#inputcsvcontainer, #submitcsvcontainer
+{
+    border: solid orange;
+}
+
+#selectcsvcontainer
+{
+    height: 20%;
+}
+
+#inputcsvcontainer
+{
+    height: 70%;
+}
+
+#submitcsvcontainer
+{
+    height: 10%;
+}
+
+#csvtype
+{
+    width: 97.5%;
+    height: 75px;
+    padding: 12px 20px;
+    margin-left: 1.25%;
+    margin-top: 1.25%;
+    text-align: center;
+    font-size: 32px;
+}
+
+#csvinput
+{
+    width: 96%;
+    height: 400px;
+    margin-left: 1.25%;
+    margin-top: 1.25%;
+    text-align: center;
+    font-size: 16px;
+}
+
+#home #bottom
+{
+    height: 40%;
+    display: flex;
+}
+
+#home #bottom #trailers, #info
+{
+    width: 50%;
+    border: solid blue;
+}

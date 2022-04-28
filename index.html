@@ -11,7 +11,9 @@
 		<link rel="stylesheet" href="./css/tabs.css">
 
 		<script src="./js/filter.js"></script>
+		<script src="./js/importcsv.js"></script>
 		<script src="./js/locations.js"></script>
+		<script src="./js/login.js"></script>
 		<script src="./js/map.js"></script>
 		<script src="./js/mapsUI.js"></script>
 		<script src="./js/resizeDiv.js"></script>
@@ -94,20 +96,35 @@
 		<div id="content">
 			<div id="home", class="tabContent", style="display: flex">
 				<div id="top">
-					<div id="facility">facility num</div>
+					<div id="facility">
+						<div id="facilitytitle">Choose a facility</div>
+						<div id="facilitylist">
+							<input type="radio", id="1", name="facilitynum">
+							<label for="1">1</label>
+							<input type="radio", id="2", name="facilitynum">
+							<label for="2">2</label>
+							<input type="radio", id="3", name="facilitynum">
+							<label for="3">3</label>
+							<input type="radio", id="4", name="facilitynum">
+							<label for="4">4</label>
+						</div>
+						<!--CHAM PASS = seanrulz-->
+						<div id="facilitypasswordcontainer"><input type="password", id="facilitypassword", placeholder="Password"></div>
+						<div id="facilitysubmitcontainer"><button id="facilitysubmit", onclick="login()">LOGIN</button></div>
+					</div>
 					<div id="dispatch">hub or mainline</div>
 					<div id="import">
 						<div id="selectcsvcontainer">
 							<select id="csvtype">
 								<option value="outbound">Outbound</option>
-								<option vlaue="dockload">Dock Loading</option>
+								<option value="dockload">Dock Loading</option>
 							</select>
 						</div>
 						<div id="inputcsvcontainer">
-							<input type="text" id="csvinput" placeholder="Copy contents of respective CSV here...">
+							<textarea id="csvinput", placeholder="Copy contents of respective CSV here..."></textarea>
 						</div>
 						<div id="submitcsvcontainer">
-							ajhreajrj
+							<button id="submitcsv", onclick="importcsv()">IMPORT</button>
 						</div>
 						
 					</div>

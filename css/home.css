@@ -1,3 +1,9 @@
+:root
+{
+    --borderColor: solid grey;
+    --borderWidth: 2px;
+}
+
 #home
 {
     height: 100%;
@@ -9,6 +15,7 @@
 #home #top
 {
     flex: 1;
+    height: 60%;
     width: 100%;
     display: flex;
 }
@@ -16,21 +23,135 @@
 #home #top #facility, #dispatch, #import
 {
     flex: 1;
-    border: solid rgb(255, 0, 43);
-}
-
-#home #top #import
-{
+    border: var(--borderColor);
+    border-width: var(--borderWidth);
     display: flex;
     flex-direction: column;
 }
 
-#import #selectcsvcontainer,
-#inputcsvcontainer, #submitcsvcontainer
+
+
+
+
+/* FACILITY */
+#facilitytitle
 {
-    border: solid orange;
+    height: 20%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 32px;
 }
 
+#facilitylist
+{
+    height: 60%;
+}
+
+#facilitypasswordcontainer
+{
+    height: 10%;
+}
+
+#facilitysubmitcontainer
+{
+    height: 10%;
+}
+
+#facilitylist
+{
+    max-height: 60%;
+    width: 60%;
+    margin-left: 20%;
+    border: var(--borderColor);
+    border-width: var(--borderWidth);
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#facilitylist::-webkit-scrollbar
+{
+    display: none;
+}
+
+#facilitylist label
+{
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #cfcfcf;
+    font-size: 24px;
+}
+
+#facilitylist label:nth-child(4n)
+{
+    background-color: #f5f5f5;
+}
+
+#facilitylist label:hover
+{
+    background-color: #b9b9b9;
+}
+
+#facilitylist input[type="radio"]
+{
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+#facilitylist input[type="radio"]:checked + label
+{
+    border: 2px solid black;
+    background-color: #969696;
+}
+
+#facilitypassword
+{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 1.25%;
+    font: small-caption;
+    font-size: 24px;
+    text-align: center;
+}
+
+#facilitysubmit
+{
+    width: 97.5%;
+    height: 95%;
+    margin-left: 1.25%;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    color: #FFFFFF;
+    background-color: #43b5f1;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#facilitysubmit:hover
+{
+    background-color: #4095c6;
+}
+
+
+
+
+
+/* DISPATCH */
+
+
+
+
+
+/* IMPORT */
 #selectcsvcontainer
 {
     height: 20%;
@@ -49,7 +170,7 @@
 #csvtype
 {
     width: 97.5%;
-    height: 75px;
+    height: 80%;
     padding: 12px 20px;
     margin-left: 1.25%;
     margin-top: 1.25%;
@@ -59,12 +180,33 @@
 
 #csvinput
 {
-    width: 96%;
-    height: 400px;
+    width: 96.5%;
+    height: 95%;
     margin-left: 1.25%;
     margin-top: 1.25%;
-    text-align: center;
     font-size: 16px;
+    resize: none;
+}
+
+#submitcsv
+{
+    width: 97.5%;
+    height: 95%;
+    margin-left: 1.25%;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    color: #FFFFFF;
+    background-color: #43b5f1;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#submitcsv:hover
+{
+    background-color: #4095c6;
 }
 
 #home #bottom
@@ -76,5 +218,6 @@
 #home #bottom #trailers, #info
 {
     width: 50%;
-    border: solid blue;
+    border: var(--borderColor);
+    border-width: var(--borderWidth);
 }

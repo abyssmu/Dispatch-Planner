@@ -20,4 +20,34 @@ function importcsv()
     {
         console.log('importing dock loading');
     }
+
+    trailer = new Trailer(number = 123456);
+
+    trailers.push(trailer);
+    trailers.push(trailer);
+    trailers.push(trailer);
+    trailers.push(trailer);
+    trailers.push(trailer);
+    trailers.push(trailer);
+    trailers.push(trailer);
+    trailers.push(trailer);
+    trailers.push(trailer);
+
+    importTrailers();
+}
+
+function importTrailers()
+{
+    var trailersDiv = document.getElementById("trailers");
+
+    trailers.forEach(element => 
+    {
+        var newTrailerButton = document.createElement("button");
+
+        newTrailerButton.setAttribute('id', element.number);
+        newTrailerButton.setAttribute('class', "trailer");
+        newTrailerButton.innerHTML = element.number.toString();
+
+        trailersDiv.appendChild(newTrailerButton);
+    })
 }

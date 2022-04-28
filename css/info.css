@@ -1,0 +1,60 @@
+#info
+{
+    display: grid;
+    grid-template:
+        'origin origin destination destination number number'
+        'percentage packages due due currentlocation currentlocation'
+        'loads loads loads loads loads loads'
+        'loads loads loads loads loads loads';
+    gap: 10px;
+    background-color: #2196f3;
+    padding: 10px;
+}
+
+#info > div
+{
+    background-color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 26px;
+}
+
+#number
+{
+    grid-area: number;
+}
+
+#origin
+{
+    grid-area: origin;
+}
+
+#destination
+{
+    grid-area: destination;
+}
+
+#percentage
+{
+    grid-area: percentage;
+}
+
+#packages
+{
+    grid-area: packages;
+}
+
+#loads
+{
+    grid-area: loads;
+}
+
+#due
+{
+    grid-area: due;
+}
+
+#currentlocation
+{
+    grid-area: currentlocation;
+}

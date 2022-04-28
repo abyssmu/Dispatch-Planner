@@ -4,20 +4,24 @@
 		<meta charset="UTF-8">
 		<title>Main</title>
 		<link rel="stylesheet" href="./css/home.css">
+		<link rel="stylesheet" href="./css/info.css">
 		<link rel="stylesheet" href="./css/main.css">
 		<link rel="stylesheet" href="./css/map.css">
 		<link rel="stylesheet" href="./css/menu.css">
 		<link rel="stylesheet" href="./css/resizable.css">
 		<link rel="stylesheet" href="./css/tabs.css">
+		<link rel="stylesheet" href="./css/trailers.css">
 
 		<script src="./js/filter.js"></script>
 		<script src="./js/importcsv.js"></script>
+		<script src="./js/info.js"></script>
 		<script src="./js/locations.js"></script>
 		<script src="./js/login.js"></script>
 		<script src="./js/map.js"></script>
 		<script src="./js/mapsUI.js"></script>
 		<script src="./js/resizeDiv.js"></script>
 		<script src="./js/tabs.js"></script>
+		<script src="./js/trailers.js"></script>
 	</head>
 	<body>
 		<!-- <div class="container-left">
@@ -99,8 +103,20 @@
 					<div id="facility">
 						<div id="facilitytitle">Choose a facility</div>
 						<div id="facilitylist">
-							<input type="radio", id="1", name="facilitynum">
-							<label for="1">1</label>
+							<input type="radio", id="619", name="facilitynum">
+							<label for="619">619</label>
+							<input type="radio", id="2", name="facilitynum">
+							<label for="2">2</label>
+							<input type="radio", id="3", name="facilitynum">
+							<label for="3">3</label>
+							<input type="radio", id="4", name="facilitynum">
+							<label for="4">4</label>
+							<input type="radio", id="2", name="facilitynum">
+							<label for="2">2</label>
+							<input type="radio", id="3", name="facilitynum">
+							<label for="3">3</label>
+							<input type="radio", id="4", name="facilitynum">
+							<label for="4">4</label>
 							<input type="radio", id="2", name="facilitynum">
 							<label for="2">2</label>
 							<input type="radio", id="3", name="facilitynum">
@@ -112,7 +128,12 @@
 						<div id="facilitypasswordcontainer"><input type="password", id="facilitypassword", placeholder="Password"></div>
 						<div id="facilitysubmitcontainer"><button id="facilitysubmit", onclick="login()">LOGIN</button></div>
 					</div>
-					<div id="dispatch">hub or mainline</div>
+					<div id="dispatch">
+						<input type="radio", id="hubarea", name="dispatchtype">
+						<label for="hubarea">HUB AREA</label>
+						<input type="radio", id="mainline", name="dispatchtype">
+						<label for="mainline">MAINLINE</label>
+					</div>
 					<div id="import">
 						<div id="selectcsvcontainer">
 							<select id="csvtype">
@@ -130,8 +151,41 @@
 					</div>
 				</div>
 				<div id="bottom">
-					<div id="trailers">trailers</div>
-					<div id="info">info panel</div>
+					<div id="trailers"></div>
+					<div id="info">
+						<div id="number">
+							<div>Number</div>
+							<div>123456</div>
+						</div>
+						<div id="origin">
+							<div>Origin</div>
+							<div>619</div>
+						</div>
+						<div id="destination">
+							<div>Destination</div>
+							<div>641</div>
+						</div>
+						<div id="percentage">
+							<div>Percentage</div>
+							<div><input type="range", min="1", max="100", value="1", class="slider"></div>
+						</div>
+						<div id="packages">
+							<div>Packages</div>
+							<div>1500</div>
+						</div>
+						<div id="loads">
+							<div>Loads</div>
+							<div>None</div>
+						</div>
+						<div id="due">
+							<div>Due Date</div>
+							<div>1600, 15.Apr</div>
+						</div>
+						<div id="currentlocation">
+							<div>Current Location</div>
+							<div>619</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div id="mapContainer", class="tabContent", style="display: none">
